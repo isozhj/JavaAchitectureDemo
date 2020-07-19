@@ -24,5 +24,9 @@
   </dependencies>
   <modules>
   	<module>architectureMyWeb</module>
+  	<module>common</module>
+  	<module>customerManager</module>
+  	<module>goodsManager</module>
+  	<module>goodsManagerWeb</module>
   </modules>
 </project>

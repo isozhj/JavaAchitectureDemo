@@ -23,5 +23,49 @@
   </dependencies>
   <build>
     <finalName>architectureMyWeb</finalName>
+    <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<overlays>
+						<overlay>
+							<groupId>com.isoft</groupId>
+							<artifactId>customerManager</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>com.isoft</groupId>
+							<artifactId>goodsManagerWeb</artifactId>
+						</overlay>
+					</overlays>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- <verion>8.1.14.v20131031</verion> -->
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.28.v20200408</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<stopKey>stop</stopKey>
+					<stopPort>9999</stopPort>
+					<webAppConfig>
+						<contextPath>/</contextPath>
+					</webAppConfig>
+					<httpConnector>
+						<port>9080</port>
+					</httpConnector>
+					<!-- <connectors> <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector"> 
+						<port>9080</port> <maxIdleTime>60000</maxIdleTime> </connector> </connectors> -->
+					<!--jetty 9一下有效，jetty9以上无效,jetty9以上<port>替换为</httpConnector> <connector 
+						> <port>9080</port> </connector> -->
+					<!-- 未知含义 <contextXml>${project.basedir}/src/main/resources/jetty-context.xml</contextXml> -->
+					<!-- 设置先于web.xml执行的webdefault.xml配置文件的路径 <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor> -->
+
+				</configuration>
+			</plugin>
+		</plugins>
   </build>
 </project>
