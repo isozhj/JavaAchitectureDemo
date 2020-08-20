@@ -1,29 +1,44 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.isoft</groupId>
-    <artifactId>architectureAll</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <groupId>com.isoft</groupId>
-  <artifactId>architectureMyWeb</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>architectureMyWeb Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <build>
-    <finalName>architectureMyWeb</finalName>
-    <plugins>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.isoft</groupId>
+		<artifactId>architectureAll</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.isoft</groupId>
+	<artifactId>architectureMyWeb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>architectureMyWeb Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.isoft</groupId>
+			<artifactId>customerManager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+
+		<dependency>
+			<groupId>com.isoft</groupId>
+			<artifactId>goodsManagerWeb</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>architectureMyWeb</finalName>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -59,7 +74,7 @@
 					</httpConnector>
 					<!-- <connectors> <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector"> 
 						<port>9080</port> <maxIdleTime>60000</maxIdleTime> </connector> </connectors> -->
-					<!--jetty 9一下有效，jetty9以上无效,jetty9以上<port>替换为</httpConnector> <connector 
+					<!--jetty 9以下有效，jetty9以上无效,jetty9以上<port>替换为</httpConnector> <connector 
 						> <port>9080</port> </connector> -->
 					<!-- 未知含义 <contextXml>${project.basedir}/src/main/resources/jetty-context.xml</contextXml> -->
 					<!-- 设置先于web.xml执行的webdefault.xml配置文件的路径 <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor> -->
@@ -67,5 +82,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-  </build>
+	</build>
 </project>
