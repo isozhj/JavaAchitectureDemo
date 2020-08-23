@@ -29,11 +29,10 @@
   <build>
     <finalName>customerManager</finalName>
     <plugins>
-    			<plugin>
-				<!-- <verion>8.1.14.v20131031</verion> -->
+			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.28.v20200408</version>
+				<version>9.4.31.v20200723</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopKey>stop</stopKey>
