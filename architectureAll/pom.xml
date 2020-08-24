@@ -45,5 +45,6 @@
 		<module>goodsManager</module>
 		<module>goodsManagerWeb</module>
 		<module>cartManager</module>
+		<module>orderManager</module>
 	</modules>
 </project>
