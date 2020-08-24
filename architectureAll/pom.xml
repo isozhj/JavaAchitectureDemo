@@ -13,8 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>18</maven.compiler.source>
-		<maven.compiler.target>18</maven.compiler.target>
+		<maven.compiler.source>14</maven.compiler.source>
+		<maven.compiler.target>14</maven.compiler.target>
 
 	</properties>
 
@@ -44,5 +44,6 @@
 		<module>customerManager</module>
 		<module>goodsManager</module>
 		<module>goodsManagerWeb</module>
+		<module>cartManager</module>
 	</modules>
 </project>

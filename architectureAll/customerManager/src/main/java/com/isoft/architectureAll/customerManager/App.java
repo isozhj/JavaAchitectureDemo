@@ -1,4 +1,4 @@
-package com.isoft.architectureAll.common;
+package com.isoft.architectureAll.customerManager;
 
 /**
  * Hello world!
