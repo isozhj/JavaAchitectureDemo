@@ -35,6 +35,24 @@
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
+				<dependency>
+			<groupId>com.isoft</groupId>
+			<artifactId>cartManager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+				<dependency>
+			<groupId>com.isoft</groupId>
+			<artifactId>orderManager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+				<dependency>
+			<groupId>com.isoft</groupId>
+			<artifactId>storeManager</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>architectureMyWeb</finalName>
@@ -52,6 +70,18 @@
 						<overlay>
 							<groupId>com.isoft</groupId>
 							<artifactId>goodsManagerWeb</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>com.isoft</groupId>
+							<artifactId>cartManager</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>com.isoft</groupId>
+							<artifactId>orderManager</artifactId>
+						</overlay>
+						<overlay>
+							<groupId>com.isoft</groupId>
+							<artifactId>storeManager</artifactId>
 						</overlay>
 					</overlays>
 				</configuration>
@@ -81,8 +111,8 @@
 
 				</configuration>
 			</plugin>
-			
-			
+
+
 		</plugins>
 	</build>
 </project>
