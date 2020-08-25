@@ -20,6 +20,7 @@
 		<module>cartManager</module>
 		<module>orderManager</module>
 		<module>storeManager</module>
+		<module>front</module>
 	</modules>
 
 	<properties>
